@@ -24,15 +24,16 @@ const VerticalMovieList: React.FC<VerticalMovieListProps> = ({ movies, title, is
             }
         };
 
-        updateMoviesToShow(); // Initial check
-        window.addEventListener('resize', updateMoviesToShow); // Add event listener
+        updateMoviesToShow();
+        window.addEventListener('resize', updateMoviesToShow);
 
         return () => {
-            window.removeEventListener('resize', updateMoviesToShow); // Clean up event listener
+            window.removeEventListener('resize', updateMoviesToShow);
         };
     }, []);
 
     const handleCardClick = (movieId: number) => {
+        setStartIndexSM(0)
         movieStore.addRecentlyViewedMovie(movies.find((movie) => movie.id === movieId)!);
         navigate(`/movie/${movieId}`);
     };

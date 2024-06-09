@@ -9,6 +9,7 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
+      movieStore.setCurrentPage(1);
       onSearch(movieStore.searchQuery);
     }
   };
@@ -17,6 +18,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     const value = e.target.value;
     movieStore.setSearchQuery(value);
     if (value.length === 0) {
+      movieStore.setCurrentPage(1);
       onSearch("");
     }
   };
