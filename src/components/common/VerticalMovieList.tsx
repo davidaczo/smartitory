@@ -63,7 +63,7 @@ const VerticalMovieList: React.FC<VerticalMovieListProps> = ({ movies, title, is
                         {movies.slice(startIndexSM, startIndexSM + moviesToShow).map((movie, index) => (
                             <div
                                 key={index}
-                                className="border p-4 z-10 rounded shadow-xl hover:scale-105 duration-300 transition cursor-pointer"
+                                className="card"
                                 onClick={() => { handleCardClick(movie.id); }}
                             >
                                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full" />

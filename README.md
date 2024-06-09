@@ -4,9 +4,7 @@
     -ezen felül hozzáadtam egy similar movies listát a film részletes nézhetéhez, az ebben lévő filmeket /movie/${movieId}/similar 
     endpointról kértem le, valamint egy recently viewed listát a main pagen ahol azokat az filmeket jelenitem meg amelyekre a user
     rákattintott a sessionje folyamán
-    -stilusozáshoz Tailwindet használtam, a projekt mérete miatt nem vezettem be globális stilusokat de ha a továábfejlesztési
-    lehetőségekről van szó akkor elhanyagolhatatlan lenne, hogy a többször előforduló stilusokat kivegyük és egy közös helyen
-    határozzuk meg őket, ezzel a kód minősége, olvashatósága is javulna
+    -stilusozáshoz Tailwindet használtam
     -a hibákat egy error fallback scrennel kezeltem le, itt a user megpróbálhatja újra betölteni a meglevő url-t vagy a main
     pagere navigálhat át ahol a trending filmek jelennek meg újból. Nem lekezelt url kérésekor is ez az oldal térül vissza
     -loading statet vezettem be a lista valamint a részletes nézet betöltésének idejére. A main pagen a listában skeleeton cardok jelennek meg

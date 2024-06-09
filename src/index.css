@@ -15,3 +15,32 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Common styles */
+
+/* Card components */
+.card {
+  @apply border p-4 rounded shadow-xl hover:scale-105 duration-300 transition cursor-pointer;
+}
+
+/* Button component */
+.button {
+  @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700;
+}
+
+/* Skeleton loader */
+.skeleton-text {
+  @apply mx-auto bg-gray-200 rounded-full;
+}
+
+.pagination-button {
+  @apply font-medium mx-1 px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center
+}
+
+/* Component specific styles */`
+
+/* Vertical list component */
+.vertical-list-button {
+  @apply absolute transform -translate-y-1/2 top-1/2 font-medium p-4 border rounded-full bg-gray-50 hover:bg-gray-200 cursor-pointer flex items-center;
+}

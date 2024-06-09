@@ -54,7 +54,7 @@ const Pagination: React.FC = () => {
             {movieStore.currentPage > 1 && (
                 <button
                     onClick={() => movieStore.setCurrentPage(movieStore.currentPage - 1)}
-                    className="font-medium mx-1 px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center"
+                    className="pagination-button"
                 >
                     <FaChevronLeft />
                 </button>
@@ -63,7 +63,7 @@ const Pagination: React.FC = () => {
             {movieStore.currentPage < movieStore.getTotalPages() && (
                 <button
                     onClick={() => movieStore.setCurrentPage(movieStore.currentPage + 1)}
-                    className="font-medium mx-1 px-3 py-1 border rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center"
+                    className="pagination-button"
                 >
                     <FaChevronRight />
                 </button>

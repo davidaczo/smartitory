@@ -18,7 +18,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
     return (
         <div
-            className="border p-4 rounded shadow-xl hover:scale-105 duration-300 transition cursor-pointer"
+            className="card"
             onClick={handleCardClick}
         >
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full" />
